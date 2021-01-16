@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="menu">
+    <a href="anasayfa.html">Anasayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="iletisim.html">İletişim</a>
+  </div>
+</div>
+<header>
+
+<h1 class="w3-center alert alert-warning" >KUDRED KAHVE DÜNYASI<span><sub style="font-size:20px">Gerçek Lezzet </sub></span></h1>
+<span class="menu-butonu" style="font-size:30px;cursor:pointer; " onclick="openNav()">&#9776; Menü</span>
+</header>
+
+<h2 class="w3-center" style="margin-top:5px;"><button style="font-size:35px;" class="btn btn-light" disabled><b>Galeri</b></button></h2>
+
+
+
+<div class="w3-content" style="max-width:700px">
+
+  <img class="mySlides" src="images/kahveci.jpeg" style="width:100%;display:none">
+  <img class="mySlides" src="images/barista.jpg" style="width:100%">
+  <img class="mySlides" src="images/barista2.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="images/kahve.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="images/kahve5.jpeg" style="width:100%;">
+  <img class="mySlides" src="images/kahveci.jpg" style="width:100%;display:none">
+ 
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/kahveci.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/barista.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/barista2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/kahve.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/kahve5.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/kahveci.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
+    </div>
+	
+
+  </div>
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+</body>
+
+
+
+<footer>
+  <p>Kudred Mahmut AKAR<br>
+  <a href="hakkimizda.html">Hakkımızda</a></p>
+</footer>
+
+</html>
